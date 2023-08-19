@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.antenna {
+  width: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 40px;
+}
+
+.antenna__left,
+.antenna__right {
+  background: rgb(163, 196, 57);
+  width: 8px;
+  height: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+}
+
+.antenna__left {
+  transform: skew(30deg);
+  right: 20px;
+}
+
+.antenna__right {
+  transform: skew(-30deg);
+  left: 20px;
+}
+
+.head {
+  background: rgb(163, 196, 57);
+  width: 200px;
+  height: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  margin-bottom: 5px;
+}
+
+.eye {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.eye__left,
+.eye__right {
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.body {
+  width: 350px;
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.body__body {
+  background: rgb(163, 196, 57);
+  width: 200px;
+  height: 140px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.body__arm {
+  background: rgb(163, 196, 57);
+  width: 40px;
+  height: 110px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: relative;
+}
+
+.body__arm--left {
+  left: 10px;
+}
+
+.body__arm--right {
+  right: 10px;
+}
+
+.leg {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: strecth;
+}
+
+.leg__item {
+  background: rgb(163, 196, 57);
+  width: 40px;
+  height: 60px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */

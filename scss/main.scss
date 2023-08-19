@@ -1,0 +1,100 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+    @include displayFlex (flex, column, center, center)
+}
+
+.container {
+    max-width: 100%;
+    margin-top: 2rem;
+    @include displayFlex(flex, column, center, center);
+}
+
+// || ANTENAS
+.antenna {
+    @include widthHeigh(150px, auto);
+    @include displayFlex(flex, row, space-around, center);
+    position: relative;
+    top: 40px;
+}
+
+.antenna__left,
+.antenna__right {
+    background: $color-body;
+    @include widthHeigh(8px, 50px);
+    @include borderRadiusTop(50px, 50px);
+    position: relative;
+}
+
+.antenna__left {
+    transform: skew(30deg);
+    right: 20px;
+}
+.antenna__right {
+    transform: skew(-30deg);
+    left: 20px;
+}
+
+
+// || CABEZA
+
+
+.head {
+    background: $color-body;
+    @include widthHeigh(200px, 100px);
+    @include borderRadiusTop(100px, 100px);
+    margin-bottom: 5px;
+}
+
+.eye{
+    @include widthHeigh(auto, 100%);
+    @include displayFlex(flex, row, space-around, center);
+}
+
+.eye__left,
+.eye__right{
+    background: $color-eyes;
+    border-radius: 50%;
+    @include widthHeigh(15px, 15px);
+}
+
+.body {
+    @include widthHeigh(350px, 140px);
+    @include displayFlex(flex, row, space-evenly, flex-start);    
+}
+
+.body__body {
+    background: $color-body;
+    @include widthHeigh(200px, 140px);
+    @include borderRadiusBottom(25px, 25px);
+}
+
+.body__arm {
+    background: $color-body;
+    @include widthHeigh(40px, 110px);
+    @include borderRadiusTop(50px, 50px);
+    @include borderRadiusBottom(50px, 50px);
+    position: relative;
+}
+
+.body__arm--left {
+    left: 10px;
+}
+.body__arm--right{
+    right: 10px;
+}
+
+// || LEGS
+
+
+.leg {
+    @include widthHeigh(150px, 100px);
+    @include displayFlex(flex, row, space-around, strecth);
+}
+
+.leg__item {
+    background: $color-body;
+    @include widthHeigh(40px, 60px);
+    @include borderRadiusBottom(50px, 50px);
+}
